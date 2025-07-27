@@ -72,6 +72,13 @@ const timeline = [
         title: "Deputy Head of Sponsorship, SSN Lakshya Entrepreneurship Club",
         desc: "Serving as Deputy Head of Sponsorship at Lakshya Entrepreneurship Club, SSN.",
     },
+    {
+        year: "2025",
+        icon: "🚀",
+        index: 9,
+        title: "Personal Portfolio Website",
+        desc: "Developed a modern, responsive portfolio website using React 19, Tailwind CSS, and EmailJS. Features dark/light theme toggle, animated components, contact form integration, and professional project showcase.",
+    },
 ];
 
 const Timeline = () => (
@@ -87,15 +94,15 @@ const Timeline = () => (
                         <li key={idx} className="mb-16 flex w-full items-center justify-start relative">
                             {/* Left side card */}
                             {isLeft && (
-                                <div className="w-full sm:w-1/2 flex justify-end pr-0 sm:pr-8">
-                                    <div className="bg-white/90 text-gray-900 border-indigo-100 shadow-lg dark:bg-indigo-950/80 dark:text-indigo-100 dark:border-indigo-500 dark:shadow-indigo-900/60 rounded-xl p-6 max-w-2xl text-right animate-fade-in-timeline border-r-4 border-indigo-400">
+                                <div className="w-full sm:w-2/3 flex justify-end pr-0 sm:pr-8">
+                                    <div className="bg-white/90 text-gray-900 border-indigo-100 shadow-lg dark:bg-indigo-950/80 dark:text-indigo-100 dark:border-indigo-500 dark:shadow-indigo-900/60 rounded-xl p-6 max-w-3xl text-right animate-fade-in-timeline border-r-4 border-indigo-400">
                                         <h4 className="text-lg font-bold mb-1 flex items-center justify-end gap-2">{item.title} <span className="text-2xl">{item.icon}</span></h4>
                                         <p className="text-gray-700 dark:text-gray-200 text-base">{item.desc}</p>
                                     </div>
                                 </div>
                             )}
                             {/* Timeline dot, year, and horizontal branch */}
-                            <div className="hidden sm:flex flex-col items-center w-1/2 relative">
+                            <div className="hidden sm:flex flex-col items-center w-1/3 relative">
                                 {/* Year and icon on the line */}
                                 <div className="flex flex-col items-center">
                                     <span className="flex items-center justify-center w-10 h-10 bg-indigo-200 dark:bg-indigo-600 rounded-full ring-4 ring-indigo-100 dark:ring-indigo-800 text-2xl relative z-10 mb-2">
@@ -108,8 +115,8 @@ const Timeline = () => (
                             </div>
                             {/* Right side card */}
                             {!isLeft && (
-                                <div className="w-full sm:w-1/2 flex justify-start pl-0 sm:pl-8">
-                                    <div className="bg-white/90 text-gray-900 border-indigo-100 shadow-lg dark:bg-indigo-950/80 dark:text-indigo-100 dark:border-indigo-500 dark:shadow-indigo-900/60 rounded-xl p-6 max-w-2xl text-left animate-fade-in-timeline border-l-4 border-indigo-400">
+                                <div className="w-full sm:w-2/3 flex justify-start pl-0 sm:pl-8">
+                                    <div className="bg-white/90 text-gray-900 border-indigo-100 shadow-lg dark:bg-indigo-950/80 dark:text-indigo-100 dark:border-indigo-500 dark:shadow-indigo-900/60 rounded-xl p-6 max-w-3xl text-left animate-fade-in-timeline border-l-4 border-indigo-400">
                                         <h4 className="text-lg font-bold mb-1 flex items-center gap-2">{item.icon} {item.title}</h4>
                                         <p className="text-gray-700 dark:text-gray-200 text-base">{item.desc}</p>
                                     </div>

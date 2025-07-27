@@ -3,13 +3,14 @@ import fireImg from "./assets/project_pic/fire.png";
 import invertyImg from "./assets/project_pic/inverty.jpg";
 import iotImg from "./assets/project_pic/iot.jpg";
 import mlImg from "./assets/project_pic/ml.jpg";
+import portfolioImg from "./assets/project_pic/portflio.png";
 
 const projects = [
     {
         title: "Personal Portfolio Website",
-        description: "A modern, responsive portfolio website built with React, Tailwind CSS, and EmailJS integration. Features dark/light theme toggle, animated components, and contact form functionality.",
+        description: "A modern, responsive portfolio website built with React 19, Tailwind CSS, and EmailJS integration. Features dark/light theme toggle, animated components, contact form with EmailJS, and professional project showcase. Includes smooth scrolling, responsive design, and optimized performance.",
         image: portfolioImg,
-        link: "https://github.com/HarishkannaR11/portfolio",
+        link: "https://github.com/HarishkannaR11/Harishkanna_Portfolio",
     },
     {
         title: "IOT Weather Station with Arduino",
