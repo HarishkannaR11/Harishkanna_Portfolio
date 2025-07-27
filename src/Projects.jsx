@@ -4,6 +4,7 @@ import invertyImg from "./assets/project_pic/inverty.jpg";
 import iotImg from "./assets/project_pic/iot.jpg";
 import mlImg from "./assets/project_pic/ml.jpg";
 import portfolioImg from "./assets/project_pic/portflio.png";
+import sapImg from "./assets/project_pic/sap.jpeg";
 
 const projects = [
     {
@@ -13,20 +14,14 @@ const projects = [
         link: "https://github.com/HarishkannaR11/Harishkanna_Portfolio",
     },
     {
-        title: "IOT Weather Station with Arduino",
-        description: "A weather station built using Arduino and IoT technologies.",
-        image: iotImg,
-        link: "https://github.com/HarishkannaR11/IOT-WEATHER-STATION-WITH-ARDUINO-",
-    },
-    {
-        title: "Fire Fighting Robot using Arduino",
-        description: "A robot designed to detect and extinguish fires using Arduino.",
-        image: fireImg,
-        link: "https://github.com/HarishkannaR11/FIRE-FIGHTING-ROBOT-USING-ARDUINO",
+        title: "SAP Hackfest 2025",
+        description: "Participated in SAP Hackfest 2025 with theme 'Sustainable Business', developing innovative solutions using SAP technologies. Successfully advanced to Round-2, demonstrating enterprise-level development skills and sustainable business solutions.",
+        image: sapImg,
+        link: "https://github.com/HarishkannaR11/SAP-Hackfest-2025",
     },
     {
         title: "Inventory Management System",
-        description: "A system to manage inventory efficiently using modern technologies.",
+        description: "Developed a comprehensive inventory management system using Java Swing GUI and MySQL database. Features role-based authentication, CRUD operations, barcode scanning, stock tracking, and reporting modules. Implemented data validation, user management, and real-time inventory updates with search and filter capabilities.",
         image: invertyImg,
         link: "https://github.com/HarishkannaR11/Invertery-Management-",
     },
@@ -35,6 +30,18 @@ const projects = [
         description: "A collaborative federated learning project developed as a team of 7 in a workshop. Explores client selection strategies in federated machine learning.",
         image: mlImg,
         link: "https://github.com/HarishkannaR11/Federated-Client-Selection___ML_Workshop-heptogan",
+    },
+    {
+        title: "IOT Weather Station with Arduino",
+        description: "Developed a smart IoT weather station using Arduino Uno, ESP8266 WiFi module, and Blynk cloud platform. Features real-time temperature, humidity, and pressure monitoring with cloud data transmission. Implemented sensor integration, WiFi connectivity, and mobile app dashboard for remote monitoring.",
+        image: iotImg,
+        link: "https://github.com/HarishkannaR11/IOT-WEATHER-STATION-WITH-ARDUINO-",
+    },
+    {
+        title: "Fire Fighting Robot using Arduino",
+        description: "Built an autonomous fire-fighting robot using Arduino microcontroller with flame sensors, IR sensors, and servo motors. Features automatic fire detection, obstacle avoidance, and water pump control. Implemented path planning algorithms and real-time sensor data processing for emergency response scenarios.",
+        image: fireImg,
+        link: "https://github.com/HarishkannaR11/FIRE-FIGHTING-ROBOT-USING-ARDUINO",
     },
 ];
 

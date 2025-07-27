@@ -1,16 +1,18 @@
 import React from "react";
+import gfgImg from "./assets/gfg.jpg";
+import leetcodeImg from "./assets/leetcode.jpg";
 
 const codingProfiles = [
     {
         title: "LeetCode",
-        image: "/leetcode.jpg",
+        image: leetcodeImg,
         link: "https://leetcode.com/u/krisharish11",
         btnClass: "bg-indigo-600 hover:bg-indigo-400",
         btnText: "View Profile",
     },
     {
         title: "GeeksforGeeks",
-        image: "/gfg.jpg",
+        image: gfgImg,
         link: "https://www.geeksforgeeks.org/user/krishar4wsb/",
         btnClass: "bg-green-600 hover:bg-green-400",
         btnText: "View Profile",
