@@ -26,12 +26,6 @@ A modern, responsive portfolio website built with React, showcasing my skills, p
 - **Boxicons** - Beautiful open source icons
 - **Custom CSS Animations** - Smooth transitions and hover effects
 
-### **Email Integration**
-- **EmailJS** - Client-side email service for contact forms
-- **Service ID**: `service_e9wtegd`
-- **Template ID**: `template_ifgjcmc`
-- **Public Key**: `m_g30txeYeC09aNvc`
-
 ### **Development Tools**
 - **ESLint** - Code linting and quality assurance
 - **PostCSS** - CSS processing and optimization
@@ -117,19 +111,7 @@ my-project/
 4. **Open your browser**
    Navigate to `http://localhost:5173`
 
-## 📧 EmailJS Configuration
 
-The contact form uses EmailJS for seamless email delivery. Configuration details:
-
-```javascript
-// EmailJS Configuration in Contact.jsx
-const result = await emailjs.sendForm(
-    'service_e9wtegd',    // Service ID
-    'template_ifgjcmc',   // Template ID
-    formRef.current,       // Form reference
-    'm_g30txeYeC09aNvc'   // Public Key
-);
-```
 
 ### Setup Your Own EmailJS:
 1. Create account at [EmailJS](https://www.emailjs.com/)
@@ -224,12 +206,6 @@ npm run build
 # Source: Deploy from a branch (main)
 # Folder: / (root)
 ```
-
-### **Netlify**
-1. Connect GitHub repository
-2. Build command: `npm run build`
-3. Publish directory: `dist`
-4. Automatic deployments on push
 
 ### **Vercel**
 1. Import GitHub repository
