@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
+import logoImg from "./assets/logo.jpeg";
 
 const socialLinks = [
     {
@@ -37,11 +38,15 @@ const Navbar = ({
 }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
-        <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[95vw] max-w-7xl z-50 bg-gradient-to-r from-indigo-900/60 via-purple-900/60 to-black/60 shadow-lg backdrop-blur-xl border-b border-indigo-800 rounded-xl">
+        <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[95vw] max-w-7xl z-[99999] bg-gradient-to-r from-indigo-900/60 via-purple-900/60 to-black/60 shadow-lg backdrop-blur-xl border-b border-indigo-800 rounded-xl">
             <div className="px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
                 {/* Brand/Logo */}
                 <a href="#home" className="flex items-center text-white text-2xl font-extrabold tracking-widest drop-shadow-lg">
-                    <span className="inline-block align-middle mr-2"></span>{brand}
+                    <img
+                        src={logoImg}
+                        alt="Logo"
+                        className="w-10 h-10 rounded-full mr-3 border-2 border-indigo-300/50 shadow-lg"
+                    />
                 </a>
                 {/* Hamburger for mobile */}
                 <button

@@ -1,7 +1,7 @@
 import React from "react";
 import { Typewriter } from 'react-simple-typewriter';
 import profilePic from "./assets/Harishkanna.jpg";
-import resumePdf from "./assets/Harishkanna__Resume.pdf";
+import resumePdf from "./assets/Harishkanna_Resume.pdf";
 
 const socialLinks = [
     {
