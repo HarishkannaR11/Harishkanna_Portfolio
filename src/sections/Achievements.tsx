@@ -186,29 +186,36 @@ export function Achievements() {
                       </div>
                     </CardContent>
 
-                    <CardContent className="p-5 pt-4 flex items-center justify-between border-t border-zinc-100 dark:border-zinc-900/50 mt-4 bg-zinc-50/20 dark:bg-zinc-950/20">
-                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-semibold flex items-center gap-1">
-                        Issued {cert.issuedDate}
-                      </span>
-                      {cert.credentialUrl ? (
-                        <Button
-                          asChild
-                          variant="ghost"
-                          size="sm"
-                          className="text-xs h-7 text-zinc-500 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-100 gap-1"
-                        >
-                          <a
-                            href={cert.credentialUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                    <CardContent className="p-5 pt-4 flex flex-col gap-2 border-t border-zinc-100 dark:border-zinc-900/50 mt-4 bg-zinc-50/20 dark:bg-zinc-950/20">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs text-zinc-400 dark:text-zinc-500 font-semibold flex items-center gap-1">
+                          Issued {cert.issuedDate}
+                        </span>
+                        {cert.credentialUrl ? (
+                          <Button
+                            asChild
+                            variant="ghost"
+                            size="sm"
+                            className="text-xs h-7 text-zinc-500 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-100 gap-1"
                           >
-                            Verify
-                            <ExternalLink className="h-3 w-3" />
-                          </a>
-                        </Button>
-                      ) : (
-                        <span className="text-xs text-zinc-500 dark:text-zinc-650 italic">
-                          Workshop
+                            <a
+                              href={cert.credentialUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Show credential
+                              <ExternalLink className="h-3 w-3" />
+                            </a>
+                          </Button>
+                        ) : (
+                          <span className="text-xs text-zinc-500 dark:text-zinc-650 italic">
+                            Workshop
+                          </span>
+                        )}
+                      </div>
+                      {cert.credentialId && (
+                        <span className="text-[10px] text-zinc-400 dark:text-zinc-600 font-mono tracking-wide">
+                          Credential ID: {cert.credentialId}
                         </span>
                       )}
                     </CardContent>

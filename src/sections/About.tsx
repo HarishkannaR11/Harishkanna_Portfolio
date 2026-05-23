@@ -157,10 +157,10 @@ export function About() {
                     <Award className="h-4.5 w-4.5" />
                   </div>
                   <h4 className="text-xs font-bold text-zinc-800 dark:text-zinc-200">
-                    Federated Learning
+                    Neurofinance Paper
                   </h4>
                   <p className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1">
-                    Published Research simulation
+                    First Author (Springer LNNS)
                   </p>
                 </Card>
               </motion.div>
@@ -211,10 +211,13 @@ export function About() {
                         </h4>
                         <div className="flex flex-wrap gap-1 mt-1.5">
                           <Badge variant="secondary" className="text-[10px] bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 px-1.5 py-0">
-                            300+ Solved
+                            Python
                           </Badge>
                           <Badge variant="secondary" className="text-[10px] bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 px-1.5 py-0">
-                            C++ & DSA
+                            JavaScript
+                          </Badge>
+                          <Badge variant="secondary" className="text-[10px] bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 px-1.5 py-0">
+                            Java
                           </Badge>
                         </div>
                       </div>
@@ -260,9 +263,6 @@ export function About() {
                           GeeksforGeeks
                         </h4>
                         <div className="flex flex-wrap gap-1 mt-1.5">
-                          <Badge variant="secondary" className="text-[10px] bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 px-1.5 py-0">
-                            Practice Score: 200+
-                          </Badge>
                           <Badge variant="secondary" className="text-[10px] bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 px-1.5 py-0">
                             Problem Solving
                           </Badge>

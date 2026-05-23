@@ -4,12 +4,21 @@ import invertyImg from "../assets/project_pic/inverty.jpg"
 import mlImg from "../assets/project_pic/ml.jpg"
 import iotImg from "../assets/project_pic/iot.jpg"
 import fireImg from "../assets/project_pic/fire.png"
+import ictisBannerImg from "../assets/project_pic/ictis_banner.png"
+import ictisCertImg from "../assets/certification/ictis_certificate.png"
+import technoVerseImg from "../assets/project_pic/technoverse_team.png"
+import orchestaiImg from "../assets/project_pic/orchestai.png"
+import federatedImg from "../assets/project_pic/federated_learning.png"
+import biomassImg from "../assets/project_pic/biomass_transformer.png"
 
 import dsaImg from "../assets/certification/DSA C&C++.jpg"
 import mlCertImg from "../assets/certification/ML Workshop IISc.jpg"
 import digitalImg from "../assets/certification/digital.jpg"
 import githubImg from "../assets/certification/github.jpg"
 import postmanImg from "../assets/certification/postman.jpg"
+import googleAgileImg from "../assets/certification/google_agile.png"
+import anthropicClaudeImg from "../assets/certification/anthropic_claude.png"
+import mongodbIntroImg from "../assets/certification/mongodb_intro.png"
 
 export interface Project {
   id: string
@@ -45,6 +54,7 @@ export interface Certification {
   title: string
   source: string
   issuedDate: string
+  credentialId?: string
   credentialUrl?: string
   skills: string[]
   image: string
@@ -60,11 +70,23 @@ export interface CurrentlyBuildingItem {
 
 export const projectsData: Project[] = [
   {
+    id: "ictis-neurocomputing",
+    title: "Financial Market Dynamics — Neurocomputing (ICTIS 2026)",
+    description: "First-author Springer-published research paper analyzing financial market regime transitions during COVID-19 using neurocomputing techniques.",
+    longDescription: "Research paper titled 'Analysis of Financial Market Dynamics using Neurocomputing for COVID-19 Regime Transitions', digitally presented at the 11th International Conference on Information and Communication Technology for Intelligent Systems (ICTIS 2026) in Bangkok, Thailand (April 9–11, 2026). Published in Springer's Lecture Notes in Networks and Systems (LNNS) series. The work explores how neurocomputing techniques analyze financial market behavior and regime shifts during the COVID-19 period, applying AI/ML models to financial time-series data.",
+    image: ictisBannerImg,
+    category: "AI/ML",
+    technologies: ["Python", "Neurocomputing", "Machine Learning", "Financial Analytics", "Time-Series Analysis", "Springer LNNS"],
+    featured: true,
+    status: "Completed",
+    year: "2026"
+  },
+  {
     id: "orchestai",
     title: "OrchestAI",
     description: "AI-powered B2B competitor market intelligence platform automating competitor activity monitoring and insight generation.",
     longDescription: "Developed during the 24-hour SNUC Hacks '26 hackathon, OrchestAI is a B2B market intelligence platform. It features automated web scraper agents to monitor competitor landing pages and pricing updates, LLM-driven analysis agents that synthesize strategic business recommendations, and a Next.js dashboard to visualize competitor intelligence in real-time.",
-    image: mlImg,
+    image: orchestaiImg,
     category: "AI/ML",
     technologies: ["Next.js", "Python", "FastAPI", "LLM Agents", "Web Scraping", "Tailwind CSS"],
     githubUrl: "https://github.com/BHUVANESH-SSN/B2B-Market-Intelligence",
@@ -80,7 +102,6 @@ export const projectsData: Project[] = [
     image: invertyImg,
     category: "Web Development",
     technologies: ["React", "MongoDB Atlas", "Tailwind CSS", "Node.js", "Express"],
-    githubUrl: "https://github.com/HarishkannaR11/Invertery-Management-",
     featured: true,
     status: "Internship",
     year: "2025"
@@ -88,11 +109,11 @@ export const projectsData: Project[] = [
   {
     id: "resume-ranking",
     title: "Placement Prediction & AI Resume Optimizer",
-    description: "AI-powered system that predicts student placements and scores/optimizes resumes against target job descriptions.",
-    longDescription: "An automated machine learning-powered system designed to analyze student academic performance and skill metrics to predict placement chances. Features an intelligent resume parser that scans uploaded PDF profiles, rates them against technical job requirements using LLMs, and provides optimized structural/content recommendations.",
-    image: mlImg,
+    description: "Top 10 at TechnoVerse Hackathon '26 (out of 260 teams, ₹10K prize). ML-based placement prediction with AI-powered resume tailoring using semantic search and ensemble models.",
+    longDescription: "Built an ML-based placement prediction and AI-resume tailoring system that secured a Top 10 finish (out of 260 teams) at the TechnoVerse Hackathon '26, winning a ₹10,000 cash prize. Uses semantic search and ensemble machine learning models to analyze student academic performance, predict placement opportunities, and optimize resumes against target job descriptions. Features an intelligent resume parser leveraging LLMs for structural and content recommendations.",
+    image: technoVerseImg,
     category: "AI/ML",
-    technologies: ["Python", "Jupyter Notebook", "Machine Learning", "OpenAI API", "n8n"],
+    technologies: ["Python", "Machine Learning", "Semantic Search", "Ensemble Models", "OpenAI API", "n8n"],
     githubUrl: "https://github.com/HarishkannaR11/Placement-Prediction-with-AI-Resume-Optimizer",
     featured: true,
     status: "Hackathon",
@@ -103,7 +124,7 @@ export const projectsData: Project[] = [
     title: "Federated Client Selection Simulation",
     description: "Collaborative machine learning simulation analyzing optimized client selection algorithms in heterogeneous federated networks.",
     longDescription: "A research project and simulation platform focused on improving federated learning efficiency under data heterogeneity (non-IID data distribution). Focuses on client selection algorithms to minimize global aggregation latency, reduce round delays, and optimize network convergence speed.",
-    image: mlImg,
+    image: federatedImg,
     category: "AI/ML",
     technologies: ["Python", "Jupyter Notebook", "PyTorch", "Federated Learning", "Research"],
     githubUrl: "https://github.com/HarishkannaR11/Federated_Client_Selection_Simulation",
@@ -116,7 +137,7 @@ export const projectsData: Project[] = [
     title: "Multimodal Transformer Biomass Prediction",
     description: "Transformer-based (ViT + DINO) multimodal ML system combining self-supervised plant imagery embeddings with tabular data for biomass prediction.",
     longDescription: "An end-to-end multimodal machine learning system that replaces conventional CNN pipelines with a Vision Transformer (ViT) and combines it with structured tabular data. Features self-supervised learning via DINO embeddings to capture global context, multimodal fusion (ViT + MLP) for joint representation learning, and a Flask inference layer. Tracked and versioned using MLflow and DagsHub.",
-    image: mlImg,
+    image: biomassImg,
     category: "AI/ML",
     technologies: ["Python", "PyTorch", "Vision Transformer (ViT)", "DINO", "LightGBM", "Flask", "MLflow", "DagsHub"],
     githubUrl: "https://github.com/HarishkannaR11/Image2BioMass",
@@ -242,10 +263,18 @@ export const skillsData: SkillCategory[] = [
 export const timelineData: TimelineItem[] = [
   {
     year: "2026",
-    title: "Transformer Biomass Prediction",
-    subtitle: "SSN Research Collaboration",
-    description: "Developed a Vision Transformer (ViT) & self-supervised DINO embedding system for multimodal biomass prediction, replacing traditional CNNs.",
-    icon: "Zap",
+    title: "AI-Augmented Software Development Intern",
+    subtitle: "TechLift Digital · Chennai, Tamil Nadu (Remote)",
+    description: "Currently building AI-augmented software solutions with Next.js, CRM platforms, and modern full-stack tooling in a remote internship role.",
+    icon: "Briefcase",
+    category: "experience"
+  },
+  {
+    year: "2026",
+    title: "Springer Research Paper — ICTIS 2026",
+    subtitle: "First Author / Digital Presentation — Bangkok, Thailand",
+    description: "Published 'Analysis of Financial Market Dynamics using Neurocomputing for COVID-19 Regime Transitions' in Springer LNNS. Digitally presented at the 11th International Conference on ICT for Intelligent Systems.",
+    icon: "GraduationCap",
     category: "achievement"
   },
   {
@@ -259,8 +288,8 @@ export const timelineData: TimelineItem[] = [
   {
     year: "2026",
     title: "TechnoVerse Hackathon '26",
-    subtitle: "Winner / 1st Place",
-    description: "Won first place in the TechnoVerse Hackathon for developing an innovative, high-performance solution under competitive time constraints.",
+    subtitle: "Top 10 Finalist / ₹10,000 Cash Prize",
+    description: "Secured a Top 10 position out of 260 participating teams. Built an ML-based Placement Prediction & AI Resume Tailoring system using semantic search and ensemble models.",
     icon: "Trophy",
     category: "achievement"
   },
@@ -279,6 +308,14 @@ export const timelineData: TimelineItem[] = [
     description: "Proposed and built enterprise sustainable business workflows under the Hackfest program, qualifying as national finalists.",
     icon: "Trophy",
     category: "achievement"
+  },
+  {
+    year: "2025",
+    title: "Software Engineer Intern",
+    subtitle: "TechLift Digital · Chennai, Tamil Nadu (Remote) · Part-time",
+    description: "Built production micro-SaaS products and full-stack applications using Next.js over a 5-month part-time engagement (Dec 2025 – Apr 2026).",
+    icon: "Briefcase",
+    category: "experience"
   },
   {
     year: "2025",
@@ -316,6 +353,40 @@ export const timelineData: TimelineItem[] = [
 
 export const certificationsData: Certification[] = [
   {
+    title: "ICTIS 2026 — Springer Conference Paper",
+    source: "Springer / ICTIS 2026",
+    issuedDate: "Apr 2026",
+    skills: ["Neurocomputing", "Financial Analytics", "Machine Learning", "Research", "Time-Series Analysis"],
+    image: ictisCertImg
+  },
+  {
+    title: "Agile Project Management",
+    source: "Google",
+    issuedDate: "Jan 2026",
+    credentialId: "EEKRT7Q61XCH",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/verify/EEKRT7Q61XCH",
+    skills: ["Project Management", "Scrum"],
+    image: googleAgileImg
+  },
+  {
+    title: "Claude Code in Action",
+    source: "Anthropic",
+    issuedDate: "Feb 2026",
+    credentialId: "niyyy8vdu72c",
+    credentialUrl: "https://verify.skilljar.com/c/niyyy8vdu72c",
+    skills: ["Context Management", "Hook System"],
+    image: anthropicClaudeImg
+  },
+  {
+    title: "Introduction to MongoDB",
+    source: "MongoDB",
+    issuedDate: "Mar 2026",
+    credentialId: "20UKYOID6IHL",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/verify/20UKYOID6IHL",
+    skills: ["MongoDB", "NoSQL", "Database"],
+    image: mongodbIntroImg
+  },
+  {
     title: "Postman API Fundamentals Student Expert",
     source: "Badgr / Postman",
     issuedDate: "2025",
@@ -332,11 +403,12 @@ export const certificationsData: Certification[] = [
     image: githubImg
   },
   {
-    title: "Foundations of Digital Marketing",
-    source: "Coursera / Google",
-    issuedDate: "2024",
-    credentialUrl: "https://coursera.org/share/0669af0ed252dec6e5da194d37948a2a",
-    skills: ["Digital Marketing", "SEO", "Analytics"],
+    title: "Foundations of Digital Marketing and E-commerce",
+    source: "Google",
+    issuedDate: "Jun 2025",
+    credentialId: "YK739AIIMI2V",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/verify/YK739AIIMI2V",
+    skills: ["Brand Awareness", "Online Advertising", "Digital Marketing", "SEO", "Analytics"],
     image: digitalImg
   },
   {
