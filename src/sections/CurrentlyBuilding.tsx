@@ -1,5 +1,5 @@
 import { motion } from "motion/react"
-import { Sparkles, Hammer, BookOpen, Orbit } from "lucide-react"
+import { Sparkles, Hammer, BookOpen, Orbit, Database } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { currentlyBuildingData, CurrentlyBuildingItem } from "@/data/portfolioData"
@@ -9,6 +9,7 @@ const iconMap: Record<string, any> = {
   "AI Resume Ranking System": Sparkles,
   "Cloud Computing Skills": BookOpen,
   "Full Stack Development": Orbit,
+  "Financial RAG Intelligence": Database,
 }
 
 export function CurrentlyBuilding() {

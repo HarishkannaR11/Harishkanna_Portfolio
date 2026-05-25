@@ -70,6 +70,19 @@ export interface CurrentlyBuildingItem {
 
 export const projectsData: Project[] = [
   {
+    id: "financial-rag",
+    title: "AI Financial Intelligence Engine",
+    description: "Production-ready RAG system utilizing FastAPI, ChromaDB, and Next.js to provide semantic analysis and insights on financial documents.",
+    longDescription: "Built a comprehensive Retrieval-Augmented Generation (RAG) system tailored for financial intelligence. The platform combines a FastAPI and ChromaDB local backend for vector search with a Next.js 15 dashboard for visualizing financial data, ingesting documents, and enabling natural language querying. Incorporates automated testing with Ragas to quantify hallucination rates and answer faithfulness.",
+    image: mlImg,
+    category: "AI/ML",
+    technologies: ["Next.js", "Python", "FastAPI", "ChromaDB", "RAG", "LLMs"],
+    githubUrl: "https://github.com/HarishkannaR11/AI-Financial-Intelligence-Engine-using-RAG",
+    featured: true,
+    status: "In Progress",
+    year: "2026"
+  },
+  {
     id: "ictis-neurocomputing",
     title: "Financial Market Dynamics — Neurocomputing (ICTIS 2026)",
     description: "First-author Springer-published research paper analyzing financial market regime transitions during COVID-19 using neurocomputing techniques.",
@@ -455,5 +468,12 @@ export const currentlyBuildingData: CurrentlyBuildingItem[] = [
     status: "Exploring",
     progress: 75,
     glowColor: "rgba(236, 72, 153, 0.4)" // pink
+  },
+  {
+    title: "Financial RAG Intelligence",
+    description: "Building a production-ready RAG system using FastAPI, ChromaDB, and Next.js for semantic financial analysis.",
+    status: "Building",
+    progress: 85,
+    glowColor: "rgba(234, 179, 8, 0.4)" // yellow
   }
 ]

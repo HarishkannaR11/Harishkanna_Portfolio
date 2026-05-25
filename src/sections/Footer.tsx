@@ -1,4 +1,4 @@
-import { Mail, Heart } from "lucide-react"
+import { Mail } from "lucide-react"
 import { Github, Linkedin } from "@/components/ui/icons"
 
 export function Footer() {
@@ -21,12 +21,6 @@ export function Footer() {
           </span>
         </div>
 
-        {/* Core Tech Attribution */}
-        <div className="flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-500 font-semibold">
-          <span>Built with</span>
-          <Heart className="h-3 w-3 text-red-500 fill-red-500 animate-pulse" />
-          <span>using React, shadcn/ui & Tailwind</span>
-        </div>
 
         {/* Social Icons */}
         <div className="flex items-center gap-4 text-zinc-400">
