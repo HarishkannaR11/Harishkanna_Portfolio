@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+import { motion, Variants } from "motion/react"
 import { GraduationCap, Award, Briefcase, ExternalLink, Code2, Trophy } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -9,7 +9,7 @@ import leetcodeLogo from "../assets/leetcode.jpg"
 import gfgLogo from "../assets/gfg.jpg"
 
 export function About() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -19,7 +19,7 @@ export function About() {
     },
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -114,16 +114,22 @@ export function About() {
               className="space-y-4 text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium"
             >
               <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-150">
-                Hi, I'm Harishkanna.
+                Hi, I’m Harishkanna.
               </h3>
               <p>
-                I'm a pre-final year Computer Science Engineering student at SSNCE who loves building things end-to-end — from clean, responsive frontends with React/Next.js to robust backends with Node.js, all the way to deploying machine learning models that work in production. My sweet spot is where web development meets ML — building scalable applications that are intelligent, not just functional.
+                I am a final-year Computer Science Engineering student at SSN College of Engineering.
               </p>
               <p>
-                My educational journey is a unique blend of hardware and software engineering—having completed a Diploma in Electrical & Electronics Engineering before pursuing my B.E. in Computer Science. This hands-on background gives me an end-to-end perspective on building smart, connected physical devices as well as modern cloud platforms.
+                I am passionate about building scalable end-to-end software systems, combining full-stack development with AI-driven solutions. My interests include system design, backend engineering, and applied machine learning, with a focus on building production-ready, real-world applications.
               </p>
               <p>
-                I have authored research on Federated Learning optimization models, won the TechnoVerse Hackathon '26, qualified as a national Finalist in SAP Hackfest 2025, and enjoy practicing algorithmic problem-solving to strengthen my computer science core.
+                I have hands-on experience in developing SaaS platforms, AI-powered CRM systems, and multi-agent intelligence systems using technologies like Next.js, Node.js, FastAPI, MongoDB, and cloud services.
+              </p>
+              <p>
+                I enjoy solving complex engineering problems, designing scalable architectures, and continuously improving my skills in system design and algorithms.
+              </p>
+              <p>
+                Currently, I am seeking opportunities in Software Engineering, Backend Development, and AI Engineering roles.
               </p>
             </motion.div>
 

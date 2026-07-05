@@ -1,4 +1,4 @@
-import portfolioImg from "../assets/project_pic/portflio.png"
+
 import sapImg from "../assets/project_pic/sap.jpeg"
 import invertyImg from "../assets/project_pic/inverty.jpg"
 import mlImg from "../assets/project_pic/ml.jpg"
@@ -61,13 +61,6 @@ export interface Certification {
   image: string
 }
 
-export interface CurrentlyBuildingItem {
-  title: string
-  description: string
-  status: string
-  progress: number
-  glowColor: string
-}
 
 export const projectsData: Project[] = [
   {
@@ -447,40 +440,4 @@ export const certificationsData: Certification[] = [
   }
 ]
 
-export const currentlyBuildingData: CurrentlyBuildingItem[] = [
-  {
-    title: "Jewelry CRM SaaS",
-    description: "Adding multi-tenant architecture, offline invoice caching, and automated ledger reporting.",
-    status: "Building",
-    progress: 80,
-    glowColor: "rgba(6, 182, 212, 0.4)" // cyan
-  },
-  {
-    title: "AI Resume Ranking System",
-    description: "Optimizing candidate parsing and embedding comparisons for higher accuracy.",
-    status: "Polishing",
-    progress: 95,
-    glowColor: "rgba(16, 185, 129, 0.4)" // emerald
-  },
-  {
-    title: "Cloud Computing Skills",
-    description: "Learning AWS serverless architecture (Lambda, API Gateway) and Docker containerization.",
-    status: "Learning",
-    progress: 60,
-    glowColor: "rgba(99, 102, 241, 0.4)" // indigo
-  },
-  {
-    title: "Full Stack Development",
-    description: "Deep diving into Next.js App Router, server actions, and PostgreSQL optimization.",
-    status: "Exploring",
-    progress: 75,
-    glowColor: "rgba(236, 72, 153, 0.4)" // pink
-  },
-  {
-    title: "Financial RAG Intelligence",
-    description: "Building a production-ready RAG system using FastAPI, ChromaDB, and Next.js for semantic financial analysis.",
-    status: "Building",
-    progress: 85,
-    glowColor: "rgba(234, 179, 8, 0.4)" // yellow
-  }
-]
+
