@@ -10,6 +10,7 @@ import technoVerseImg from "../assets/project_pic/technoverse_team.png"
 import orchestaiImg from "../assets/project_pic/orchestai.png"
 import federatedImg from "../assets/project_pic/federated_learning.png"
 import biomassImg from "../assets/project_pic/biomass_transformer.png"
+import chessShortsImg from "../assets/project_pic/chess_shorts.png"
 
 import dsaImg from "../assets/certification/DSA C&C++.jpg"
 import mlCertImg from "../assets/certification/ML Workshop IISc.jpg"
@@ -70,6 +71,19 @@ export interface CurrentlyBuildingItem {
 
 export const projectsData: Project[] = [
   {
+    id: "chess-shorts-pipeline",
+    title: "Chess Shorts Automation Pipeline",
+    description: "Fully autonomous AI pipeline with decoupled microservices to generate, render, and publish high-quality video content to YouTube.",
+    longDescription: "Engineered an end-to-end, event-driven video generation pipeline that autonomously creates YouTube Shorts. Utilizes a microservices-style architecture powered by FastAPI and APScheduler. Integrates FFmpeg for asynchronous video compositing, local SQLite for idempotency and caching (50k+ puzzles), and Kokoro TTS for voiceovers. Implements fault-tolerant fallbacks for rate limits and gracefully manages Google OAuth2 authentication for YouTube Data API publishing.",
+    image: chessShortsImg,
+    category: "AI/ML",
+    technologies: ["Python", "FastAPI", "FFmpeg", "SQLite", "YouTube API", "LLMs"],
+    githubUrl: "https://github.com/HarishkannaR11/Chess-Shorts",
+    featured: true,
+    status: "Completed",
+    year: "2026"
+  },
+  {
     id: "financial-rag",
     title: "AI Financial Intelligence Engine",
     description: "Production-ready RAG system utilizing FastAPI, ChromaDB, and Next.js to provide semantic analysis and insights on financial documents.",
@@ -90,6 +104,7 @@ export const projectsData: Project[] = [
     image: ictisBannerImg,
     category: "AI/ML",
     technologies: ["Python", "Neurocomputing", "Machine Learning", "Financial Analytics", "Time-Series Analysis", "Springer LNNS"],
+    githubUrl: "https://github.com/HarishkannaR11/COVID-Market-Regime-Analysis",
     featured: true,
     status: "Completed",
     year: "2026"
@@ -102,7 +117,7 @@ export const projectsData: Project[] = [
     image: orchestaiImg,
     category: "AI/ML",
     technologies: ["Next.js", "Python", "FastAPI", "LLM Agents", "Web Scraping", "Tailwind CSS"],
-    githubUrl: "https://github.com/BHUVANESH-SSN/B2B-Market-Intelligence",
+    githubUrl: "https://github.com/HarishkannaR11/B2B-Market-Intelligence",
     featured: true,
     status: "Hackathon",
     year: "2026"
@@ -115,6 +130,7 @@ export const projectsData: Project[] = [
     image: invertyImg,
     category: "Web Development",
     technologies: ["React", "MongoDB Atlas", "Tailwind CSS", "Node.js", "Express"],
+    githubUrl: "https://github.com/HarishkannaR11/Ai-Jewelry-CRM",
     featured: true,
     status: "Internship",
     year: "2025"
@@ -201,74 +217,65 @@ export const projectsData: Project[] = [
 
 export const skillsData: SkillCategory[] = [
   {
-    name: "Frontend",
-    icon: "Layout",
-    skills: [
-      { name: "Next.js" },
-      { name: "React" },
-      { name: "TypeScript" },
-      { name: "Tailwind CSS" },
-      { name: "shadcn/ui" },
-      { name: "HTML5/CSS3" },
-      { name: "Bootstrap" }
-    ]
-  },
-  {
-    name: "Backend",
-    icon: "Server",
-    skills: [
-      { name: "Node.js" },
-      { name: "Express" },
-      { name: "Java (JDBC)" }
-    ]
-  },
-  {
-    name: "Database",
-    icon: "Database",
-    skills: [
-      { name: "MongoDB Atlas" },
-      { name: "MySQL" },
-      { name: "SQL Plus" }
-    ]
-  },
-  {
-    name: "AI/ML",
+    name: "AI & Machine Learning",
     icon: "Cpu",
     skills: [
       { name: "Python" },
+      { name: "PyTorch" },
+      { name: "Retrieval-Augmented Generation (RAG)" },
+      { name: "Multi-Agent Systems" },
       { name: "Vision Transformers (ViT)" },
-      { name: "Machine Learning" },
-      { name: "Computer Vision (CV)" },
-      { name: "Federated Learning" },
-      { name: "OpenAI APIs" },
-      { name: "MLflow / DagsHub" },
-      { name: "n8n / LLM Orchestration" },
-      { name: "Pandas" },
-      { name: "NumPy" },
-      { name: "Scikit-Learn" }
+      { name: "LLM Orchestration" },
+      { name: "Semantic Search" },
+      { name: "Federated Learning" }
     ]
   },
   {
-    name: "Cloud & Tools",
+    name: "Backend & Systems",
+    icon: "Server",
+    skills: [
+      { name: "Node.js" },
+      { name: "FastAPI" },
+      { name: "Express.js" },
+      { name: "Microservices Architecture" },
+      { name: "RESTful APIs" },
+      { name: "System Design" },
+      { name: "Java" }
+    ]
+  },
+  {
+    name: "Database & Cloud",
+    icon: "Database",
+    skills: [
+      { name: "PostgreSQL" },
+      { name: "MongoDB" },
+      { name: "ChromaDB (Vector)" },
+      { name: "SQLite" },
+      { name: "AWS" },
+      { name: "Docker" },
+      { name: "Vercel" }
+    ]
+  },
+  {
+    name: "Frontend",
+    icon: "Layout",
+    skills: [
+      { name: "Next.js 15" },
+      { name: "React" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "shadcn/ui" }
+    ]
+  },
+  {
+    name: "DevOps & Tools",
     icon: "Wrench",
     skills: [
-      { name: "Docker" },
-      { name: "AWS" },
-      { name: "GitHub" },
-      { name: "Vercel" },
+      { name: "Git & GitHub" },
+      { name: "CI/CD Pipelines" },
       { name: "Postman" },
-      { name: "Git" },
-      { name: "VS Code" }
-    ]
-  },
-  {
-    name: "IoT",
-    icon: "Zap",
-    skills: [
-      { name: "Arduino" },
-      { name: "ESP8266" },
-      { name: "Blynk Cloud" },
-      { name: "Sensors & Actuators" }
+      { name: "MLflow" },
+      { name: "FFmpeg" }
     ]
   }
 ]

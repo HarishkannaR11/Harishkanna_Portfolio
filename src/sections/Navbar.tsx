@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 import resumePdf from "../assets/Harishkanna_Resume.pdf"
+import siteLogo from "../assets/logo.png"
 
 interface NavItem {
   label: string
@@ -23,7 +24,7 @@ const navItems: NavItem[] = [
   { label: "Tech Stack", href: "#tech-stack" },
   { label: "Projects", href: "#projects" },
   { label: "Achievements", href: "#achievements" },
-  { label: "Currently Building", href: "#currently-building" },
+
   { label: "Contact", href: "#contact" },
 ]
 
@@ -88,9 +89,7 @@ export function Navbar({ theme, toggleTheme }: NavbarProps) {
           className="flex items-center gap-2 group focus:outline-none"
         >
           <div className="h-9 w-9 rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-800 flex items-center justify-center bg-zinc-100 dark:bg-zinc-900 group-hover:border-cyan-500 transition-colors">
-            <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400 text-sm">
-              HR
-            </span>
+            <img src={siteLogo} alt="HR Logo" className="w-full h-full object-cover" />
           </div>
           <span className="font-bold text-zinc-900 dark:text-zinc-50 tracking-tight hover:text-cyan-400 dark:hover:text-cyan-400 transition-colors text-base">
             Harishkanna R
@@ -166,10 +165,8 @@ export function Navbar({ theme, toggleTheme }: NavbarProps) {
               </SheetTrigger>
               <SheetContent side="right" className="bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md text-zinc-900 dark:text-zinc-100 border-l border-zinc-200 dark:border-zinc-800">
                 <SheetHeader className="text-left mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">
-                  <SheetTitle className="text-zinc-900 dark:text-zinc-50">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400 font-extrabold mr-1">
-                      HR
-                    </span>
+                  <SheetTitle className="text-zinc-900 dark:text-zinc-50 flex items-center gap-2">
+                    <img src={siteLogo} alt="HR" className="w-6 h-6 rounded-md" />
                     Navigation
                   </SheetTitle>
                 </SheetHeader>

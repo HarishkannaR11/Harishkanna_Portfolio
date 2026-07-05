@@ -8,7 +8,7 @@ import { About } from "@/sections/About"
 import { TechStack } from "@/sections/TechStack"
 import { Projects } from "@/sections/Projects"
 import { Achievements } from "@/sections/Achievements"
-import { CurrentlyBuilding } from "@/sections/CurrentlyBuilding"
+
 import { Contact } from "@/sections/Contact"
 import { Footer } from "@/sections/Footer"
 
@@ -75,9 +75,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full border-t border-zinc-200/50 dark:border-zinc-900/50">
             <Achievements />
           </div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full border-t border-zinc-200/50 dark:border-zinc-900/50">
-            <CurrentlyBuilding />
-          </div>
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full border-t border-zinc-200/50 dark:border-zinc-900/50">
             <Contact />
           </div>

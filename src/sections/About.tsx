@@ -230,7 +230,7 @@ export function About() {
                         className="text-xs h-7 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 gap-1"
                       >
                         <a
-                          href="https://leetcode.com/u/HarishkannaR11/"
+                          href="https://leetcode.com/u/krisharish11/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
