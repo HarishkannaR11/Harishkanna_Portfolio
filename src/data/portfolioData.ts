@@ -11,6 +11,10 @@ import orchestaiImg from "../assets/project_pic/orchestai.png"
 import federatedImg from "../assets/project_pic/federated_learning.png"
 import biomassImg from "../assets/project_pic/biomass_transformer.png"
 import chessShortsImg from "../assets/project_pic/chess_shorts.png"
+import fypImg from "../assets/project_pic/fyp_alzheimers.webp"
+import counterpointImg from "../assets/project_pic/counterpoint.webp"
+import regopsImg from "../assets/project_pic/regops_ai.webp"
+import buyOrWaitImg from "../assets/project_pic/buy_or_wait.webp"
 
 import dsaImg from "../assets/certification/DSA C&C++.jpg"
 import mlCertImg from "../assets/certification/ML Workshop IISc.jpg"
@@ -63,6 +67,58 @@ export interface Certification {
 
 
 export const projectsData: Project[] = [
+  {
+    id: "alzheimers-fmri-fyp",
+    title: "Alzheimer's Progression — rs-fMRI Final Year Project",
+    description: "Auditable rs-fMRI pipeline and proposed comorbidity-aware multi-attention Transformer for Alzheimer's disease staging on ADNI data.",
+    longDescription: "Final-year project at SSN College of Engineering. Built a reproducible, checksum-audited pipeline from raw ADNI DICOM to model-ready features: BIDS organisation, preprocessing of 167 acquisitions, and Brainnetome-246 biomarkers (ALFF, ReHo, degree centrality, functional connectivity) with a leakage-free, subject-level cohort of 116 subjects. Statistical analysis found no univariate stage signal surviving multiple-comparison correction, and a redundancy between two biomarkers was identified and removed. The Multi-Attention Transformer encoder is implemented; training, comorbidity fusion, MAML meta-learning, and a Bayesian ordinal head are proposed next steps.",
+    image: fypImg,
+    category: "AI/ML",
+    technologies: ["Python", "Nilearn", "Nipype", "ANTs", "Transformers", "fMRI", "Statistics"],
+    githubUrl: "https://github.com/HarishkannaR11/FYP",
+    featured: true,
+    status: "In Progress",
+    year: "2026"
+  },
+  {
+    id: "counterpoint-news-debate",
+    title: "Counterpoint — Multi-Agent News Debate",
+    description: "Five AI analysts with opposing worldviews debate the day's top story; a moderator delivers a bias-scored verdict and challenges your own opinion.",
+    longDescription: "A LangGraph state machine that fans out to five personas (progressive, conservative, macroeconomist, geopolitical, devil's advocate), runs rebuttals with output guardrails and bounded retries, then an optional moderator-triggered crossfire round and a verdict with per-analyst bias scores. A daily scheduled job (idempotent via a Redis lock) fetches news from NewsAPI with a GNews fallback; debates are archived in Redis and replayed to the browser over WebSockets, so viewing never triggers LLM calls. Includes Guardrails AI toxicity and PII checks, a Next.js 15 frontend, Docker Compose deployment, a CI pipeline with Trivy scanning, and tests that run with a stubbed LLM.",
+    image: counterpointImg,
+    category: "AI/ML",
+    technologies: ["LangGraph", "Python", "FastAPI", "Redis", "WebSockets", "Next.js", "Guardrails AI", "Docker"],
+    githubUrl: "https://github.com/HarishkannaR11/Multi-Agent-News-Debate",
+    featured: true,
+    status: "Completed",
+    year: "2026"
+  },
+  {
+    id: "regops-ai",
+    title: "RegOps AI — SEBI Compliance Copilot",
+    description: "Agentic compliance copilot that turns SEBI regulatory circulars into trackable, auditable obligations with human-in-the-loop review.",
+    longDescription: "Hackathon prototype for SEBI-regulated intermediaries. Ingests circular PDFs with a layout-aware parser (PyMuPDF), embeds clauses into Qdrant, and runs a LangGraph pipeline on Groq's Llama 3.3 70B to extract structured obligations. A two-stage hybrid semantic diff (vector retrieval, then LLM classification into NEW / AMENDED / SUPERSEDED / UNCHANGED) compares circular versions. Confidence-aware validation auto-approves, warns, or escalates to a human review workspace with word-level diffs. Obligations are tracked in PostgreSQL with evidence and gap detection, and the pipeline exposes health checks and Prometheus metrics.",
+    image: regopsImg,
+    category: "AI/ML",
+    technologies: ["LangGraph", "FastAPI", "Qdrant", "PostgreSQL", "React", "Groq", "PyMuPDF"],
+    githubUrl: "https://github.com/HarishkannaR11/complyguard-sebi-gff-hackathon-2026",
+    featured: true,
+    status: "Hackathon",
+    year: "2026"
+  },
+  {
+    id: "buy-or-wait",
+    title: "Buy or Wait? — Financial Affordability Agent",
+    description: "Hybrid deterministic-core and multi-agent system that decides whether a user can safely afford an expense: pay in full, in part, in installments, or wait.",
+    longDescription: "Built for the 24-hour HackerRank Orchestrate hackathon (September 2026). Exact, graded numeric rules (safe amount, affordability status, ranking tiebreaks, 90-day safety check) stay in plain deterministic Python, while two LangGraph graphs handle only the unstructured parts: reconstructing a user's ledger from receipts and messages, and writing a grounded explanation. Explanations are rejected and fall back to deterministic text if they drop a required figure, inputs are guarded against prompt injection, low-confidence calls go to a human review queue, and LLM calls are cached with real token-usage reporting. Includes a React/Vite operations dashboard.",
+    image: buyOrWaitImg,
+    category: "AI/ML",
+    technologies: ["LangGraph", "Python", "FastAPI", "Groq", "LangSmith", "React", "Vite"],
+    githubUrl: "https://github.com/HarishkannaR11/Buy_or_Wait",
+    featured: true,
+    status: "Hackathon",
+    year: "2026"
+  },
   {
     id: "chess-shorts-pipeline",
     title: "Chess Shorts Automation Pipeline",
