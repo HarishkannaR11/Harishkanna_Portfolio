@@ -3,7 +3,20 @@
 
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/src/assets/logo.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="theme-color" content="#09090b" />
+    <link rel="canonical" href="%SITE_URL%/" />
+
+    <!-- Apply saved theme before first paint (prevents a dark/light flash) -->
+    <script>
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") {
+          document.documentElement.classList.remove("light", "dark");
+          document.documentElement.classList.add(t);
+        }
+      } catch (e) {}
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- SEO Meta Tags -->
@@ -14,16 +27,19 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://github.com/HarishkannaR11/Harishkanna_Portfolio" />
+    <meta property="og:url" content="%SITE_URL%/" />
     <meta property="og:title" content="Harishkanna R | Developer Portfolio" />
     <meta property="og:description" content="Building scalable web applications, AI-powered systems, and modern digital experiences." />
-    <meta property="og:image" content="/src/assets/project_pic/portflio.png" />
+    <meta property="og:image" content="%SITE_URL%/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Harishkanna R portfolio website preview" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Harishkanna R | Developer Portfolio" />
-    <meta property="twitter:description" content="Building scalable web applications, AI-powered systems, and modern digital experiences." />
-    <meta property="twitter:image" content="/src/assets/project_pic/portflio.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Harishkanna R | Developer Portfolio" />
+    <meta name="twitter:description" content="Building scalable web applications, AI-powered systems, and modern digital experiences." />
+    <meta name="twitter:image" content="%SITE_URL%/og-image.jpg" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -1,12 +1,12 @@
 import { motion, Variants } from "motion/react"
-import { GraduationCap, Award, Briefcase, ExternalLink, Code2, Trophy } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { GraduationCap, Award, Briefcase, ExternalLink, Code2 } from "lucide-react"
+import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
-import harishImg from "../assets/Harishkanna.jpg"
-import leetcodeLogo from "../assets/leetcode.jpg"
-import gfgLogo from "../assets/gfg.jpg"
+import harishImg from "../assets/Harishkanna.webp"
+import leetcodeLogo from "../assets/leetcode.webp"
+import gfgLogo from "../assets/gfg.webp"
 
 export function About() {
   const containerVariants: Variants = {
@@ -75,6 +75,7 @@ export function About() {
               <img
                 src={harishImg}
                 alt="Harishkanna R"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               {/* Overlay Gradient on Hover */}
@@ -208,6 +209,8 @@ export function About() {
                         <img
                           src={leetcodeLogo}
                           alt="LeetCode"
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover p-1 bg-zinc-50 dark:bg-zinc-950"
                         />
                       </div>
@@ -261,6 +264,8 @@ export function About() {
                         <img
                           src={gfgLogo}
                           alt="GeeksforGeeks"
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover p-1 bg-zinc-50 dark:bg-zinc-950"
                         />
                       </div>

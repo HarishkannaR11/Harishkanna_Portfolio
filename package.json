@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "harishkanna-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,7 +16,6 @@
     "@radix-ui/react-tabs": "^1.1.13",
     "@radix-ui/react-tooltip": "^1.2.8",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.39.0",
     "lucide-react": "^1.16.0",
     "motion": "^12.39.0",
     "react": "^19.1.0",

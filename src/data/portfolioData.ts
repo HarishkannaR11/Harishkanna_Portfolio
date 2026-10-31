@@ -1,29 +1,29 @@
 
-import sapImg from "../assets/project_pic/sap.jpeg"
-import invertyImg from "../assets/project_pic/inverty.jpg"
-import mlImg from "../assets/project_pic/ml.jpg"
-import iotImg from "../assets/project_pic/iot.jpg"
-import fireImg from "../assets/project_pic/fire.png"
-import ictisBannerImg from "../assets/project_pic/ictis_banner.png"
-import ictisCertImg from "../assets/certification/ictis_certificate.png"
-import technoVerseImg from "../assets/project_pic/technoverse_team.png"
-import orchestaiImg from "../assets/project_pic/orchestai.png"
-import federatedImg from "../assets/project_pic/federated_learning.png"
-import biomassImg from "../assets/project_pic/biomass_transformer.png"
-import chessShortsImg from "../assets/project_pic/chess_shorts.png"
+import sapImg from "../assets/project_pic/sap.webp"
+import invertyImg from "../assets/project_pic/inverty.webp"
+import mlImg from "../assets/project_pic/ml.webp"
+import iotImg from "../assets/project_pic/iot.webp"
+import fireImg from "../assets/project_pic/fire.webp"
+import ictisBannerImg from "../assets/project_pic/ictis_banner.webp"
+import ictisCertImg from "../assets/certification/ictis_certificate.webp"
+import technoVerseImg from "../assets/project_pic/technoverse_team.webp"
+import orchestaiImg from "../assets/project_pic/orchestai.webp"
+import federatedImg from "../assets/project_pic/federated_learning.webp"
+import biomassImg from "../assets/project_pic/biomass_transformer.webp"
+import chessShortsImg from "../assets/project_pic/chess_shorts.webp"
 import fypImg from "../assets/project_pic/fyp_alzheimers.webp"
 import counterpointImg from "../assets/project_pic/counterpoint.webp"
 import regopsImg from "../assets/project_pic/regops_ai.webp"
 import buyOrWaitImg from "../assets/project_pic/buy_or_wait.webp"
 
-import dsaImg from "../assets/certification/DSA C&C++.jpg"
-import mlCertImg from "../assets/certification/ML Workshop IISc.jpg"
-import digitalImg from "../assets/certification/digital.jpg"
-import githubImg from "../assets/certification/github.jpg"
-import postmanImg from "../assets/certification/postman.jpg"
-import googleAgileImg from "../assets/certification/google_agile.png"
-import anthropicClaudeImg from "../assets/certification/anthropic_claude.png"
-import mongodbIntroImg from "../assets/certification/mongodb_intro.png"
+import dsaImg from "../assets/certification/dsa_c_cpp.webp"
+import mlCertImg from "../assets/certification/ml_workshop_iisc.webp"
+import digitalImg from "../assets/certification/digital.webp"
+import githubImg from "../assets/certification/github.webp"
+import postmanImg from "../assets/certification/postman.webp"
+import googleAgileImg from "../assets/certification/google_agile.webp"
+import anthropicClaudeImg from "../assets/certification/anthropic_claude.webp"
+import mongodbIntroImg from "../assets/certification/mongodb_intro.webp"
 
 export interface Project {
   id: string
@@ -102,7 +102,7 @@ export const projectsData: Project[] = [
     category: "AI/ML",
     technologies: ["LangGraph", "FastAPI", "Qdrant", "PostgreSQL", "React", "Groq", "PyMuPDF"],
     githubUrl: "https://github.com/HarishkannaR11/complyguard-sebi-gff-hackathon-2026",
-    featured: true,
+    featured: false,
     status: "Hackathon",
     year: "2026"
   },
@@ -115,7 +115,7 @@ export const projectsData: Project[] = [
     category: "AI/ML",
     technologies: ["LangGraph", "Python", "FastAPI", "Groq", "LangSmith", "React", "Vite"],
     githubUrl: "https://github.com/HarishkannaR11/Buy_or_Wait",
-    featured: true,
+    featured: false,
     status: "Hackathon",
     year: "2026"
   },
@@ -128,7 +128,7 @@ export const projectsData: Project[] = [
     category: "AI/ML",
     technologies: ["Python", "FastAPI", "FFmpeg", "SQLite", "YouTube API", "LLMs"],
     githubUrl: "https://github.com/HarishkannaR11/Chess-Shorts",
-    featured: true,
+    featured: false,
     status: "Completed",
     year: "2026"
   },
@@ -167,7 +167,7 @@ export const projectsData: Project[] = [
     category: "AI/ML",
     technologies: ["Next.js", "Python", "FastAPI", "LLM Agents", "Web Scraping", "Tailwind CSS"],
     githubUrl: "https://github.com/HarishkannaR11/B2B-Market-Intelligence",
-    featured: true,
+    featured: false,
     status: "Hackathon",
     year: "2026"
   },
@@ -206,7 +206,7 @@ export const projectsData: Project[] = [
     category: "AI/ML",
     technologies: ["Python", "Jupyter Notebook", "PyTorch", "Federated Learning", "Research"],
     githubUrl: "https://github.com/HarishkannaR11/Federated_Client_Selection_Simulation",
-    featured: true,
+    featured: false,
     status: "Completed",
     year: "2025"
   },
@@ -219,7 +219,7 @@ export const projectsData: Project[] = [
     category: "AI/ML",
     technologies: ["Python", "PyTorch", "Vision Transformer (ViT)", "DINO", "LightGBM", "Flask", "MLflow", "DagsHub"],
     githubUrl: "https://github.com/HarishkannaR11/Image2BioMass",
-    featured: true,
+    featured: false,
     status: "Completed",
     year: "2026"
   },
@@ -273,6 +273,9 @@ export const skillsData: SkillCategory[] = [
       { name: "PyTorch" },
       { name: "Retrieval-Augmented Generation (RAG)" },
       { name: "Multi-Agent Systems" },
+      { name: "LangGraph" },
+      { name: "LLM Guardrails" },
+      { name: "Neuroimaging (fMRI)" },
       { name: "Vision Transformers (ViT)" },
       { name: "LLM Orchestration" },
       { name: "Semantic Search" },
@@ -288,6 +291,7 @@ export const skillsData: SkillCategory[] = [
       { name: "Express.js" },
       { name: "Microservices Architecture" },
       { name: "RESTful APIs" },
+      { name: "WebSockets" },
       { name: "System Design" },
       { name: "Java" }
     ]
@@ -299,6 +303,8 @@ export const skillsData: SkillCategory[] = [
       { name: "PostgreSQL" },
       { name: "MongoDB" },
       { name: "ChromaDB (Vector)" },
+      { name: "Qdrant (Vector)" },
+      { name: "Redis" },
       { name: "SQLite" },
       { name: "AWS" },
       { name: "Docker" },
@@ -324,12 +330,38 @@ export const skillsData: SkillCategory[] = [
       { name: "CI/CD Pipelines" },
       { name: "Postman" },
       { name: "MLflow" },
+      { name: "LangSmith" },
+      { name: "Prometheus Metrics" },
       { name: "FFmpeg" }
     ]
   }
 ]
 
 export const timelineData: TimelineItem[] = [
+  {
+    year: "2026",
+    title: "Final Year Project — Alzheimer's Progression from rs-fMRI",
+    subtitle: "SSN College of Engineering",
+    description: "Built an auditable pipeline from raw ADNI DICOM to Brainnetome-246 features for a comorbidity-aware multi-attention Transformer. Pipeline and statistics are complete; model training is the next phase.",
+    icon: "GraduationCap",
+    category: "project"
+  },
+  {
+    year: "2026",
+    title: "SEBI Hackathon 2026",
+    subtitle: "Hackathon Participant",
+    description: "Built RegOps AI, an agentic compliance copilot that turns SEBI circulars into trackable obligations using LangGraph, Qdrant, and human-in-the-loop review.",
+    icon: "Trophy",
+    category: "achievement"
+  },
+  {
+    year: "2026",
+    title: "HackerRank Orchestrate",
+    subtitle: "24-hour Hackathon Participant",
+    description: "Built Buy or Wait?, a hybrid deterministic-core and multi-agent affordability engine with LangGraph, prompt-injection guards, and a human review queue.",
+    icon: "Trophy",
+    category: "achievement"
+  },
   {
     year: "2026",
     title: "AI-Augmented Software Development Intern",
@@ -379,7 +411,7 @@ export const timelineData: TimelineItem[] = [
     category: "achievement"
   },
   {
-    year: "2025",
+    year: "Dec 2025 - Apr 2026",
     title: "Software Engineer Intern",
     subtitle: "TechLift Digital · Chennai, Tamil Nadu (Remote) · Part-time",
     description: "Built production micro-SaaS products and full-stack applications using Next.js over a 5-month part-time engagement (Dec 2025 – Apr 2026).",

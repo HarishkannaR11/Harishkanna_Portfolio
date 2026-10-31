@@ -1,6 +1,6 @@
-import { motion } from "motion/react"
+import { motion, type Variants } from "motion/react"
 import { Trophy, Award, Briefcase, GraduationCap, Megaphone, Zap, ExternalLink } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -15,7 +15,7 @@ const iconMap: Record<string, any> = {
 }
 
 export function Achievements() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -25,7 +25,7 @@ export function Achievements() {
     },
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -171,6 +171,7 @@ export function Achievements() {
                           alt={cert.title}
                           className="w-full h-full object-contain p-2 bg-zinc-100 dark:bg-zinc-950 transition-transform duration-500 group-hover:scale-105"
                           loading="lazy"
+                          decoding="async"
                         />
                       </div>
                       <div className="flex flex-wrap gap-1">

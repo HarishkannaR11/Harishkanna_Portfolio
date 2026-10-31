@@ -1,34 +1,43 @@
-import { useRef, useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useRef, useState } from "react"
+import { motion, AnimatePresence, type Variants } from "motion/react"
 import { Mail, Send, Loader2, CheckCircle2, AlertCircle } from "lucide-react"
 import { Github, Linkedin } from "@/components/ui/icons"
 import emailjs from "@emailjs/browser"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+// EmailJS IDs are public by design (they ship in the browser bundle). They're read from env vars so
+// they're easy to rotate; the fallbacks keep the deployed form working until the vars are set.
+// Restrict the allowed origins in the EmailJS dashboard so other sites can't use this quota.
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY ?? "m_g30txeYeC09aNvc"
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID ?? "service_e9wtegd"
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID ?? "template_ifgjcmc"
 
 export function Contact() {
   const formRef = useRef<HTMLFormElement>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null)
 
-  useEffect(() => {
-    // Initialize EmailJS with the user's public key
-    emailjs.init("m_g30txeYeC09aNvc")
-  }, [])
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!formRef.current) return
+
+    // Honeypot: real visitors never see or fill this field, bots usually do.
+    if ((formRef.current.elements.namedItem("company") as HTMLInputElement | null)?.value) {
+      setSubmitStatus("success")
+      formRef.current.reset()
+      return
+    }
 
     setIsLoading(true)
     setSubmitStatus(null)
 
     try {
       const result = await emailjs.sendForm(
-        "service_e9wtegd",
-        "template_ifgjcmc",
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
         formRef.current,
-        "m_g30txeYeC09aNvc"
+        { publicKey: EMAILJS_PUBLIC_KEY }
       )
 
       if (result.status === 200) {
@@ -45,7 +54,7 @@ export function Contact() {
     }
   }
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -55,7 +64,7 @@ export function Contact() {
     },
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -187,6 +196,8 @@ export function Contact() {
           <motion.div variants={itemVariants} className="lg:col-span-3">
             <Card className="border-zinc-200 dark:border-zinc-800 bg-white/40 dark:bg-zinc-900/40 p-6 shadow-sm h-full">
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-4" autoComplete="off">
+                {/* Honeypot field (hidden from people and assistive tech) */}
+                <input type="text" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="from_name" className="text-xs font-bold text-zinc-650 dark:text-zinc-300 uppercase tracking-wider block">

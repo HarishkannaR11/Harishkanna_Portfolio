@@ -1,10 +1,10 @@
-import { motion } from "motion/react"
+import { motion, type Variants } from "motion/react"
 import { ArrowRight, Mail } from "lucide-react"
 import { Github, Linkedin } from "@/components/ui/icons"
 import { Button } from "@/components/ui/button"
 
 export function Hero() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -15,7 +15,7 @@ export function Hero() {
     },
   }
 
-  const childVariants = {
+  const childVariants: Variants = {
     hidden: { opacity: 0, y: 24 },
     visible: {
       opacity: 1,
@@ -28,7 +28,7 @@ export function Hero() {
     },
   }
 
-  const glowVariants = {
+  const glowVariants: Variants = {
     animate: {
       scale: [1, 1.08, 0.95, 1.02, 1],
       x: [0, 15, -10, 8, 0],

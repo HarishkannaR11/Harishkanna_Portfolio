@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+import { motion, type Variants } from "motion/react"
 import { Layout, Server, Database, Cpu, Wrench, Zap } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -14,7 +14,7 @@ const iconMap: Record<string, any> = {
 }
 
 export function TechStack() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -24,7 +24,7 @@ export function TechStack() {
     },
   }
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,

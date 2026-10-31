@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 import resumePdf from "../assets/Harishkanna_Resume.pdf"
-import siteLogo from "../assets/logo.png"
+import siteLogo from "../assets/logo.webp"
 
 interface NavItem {
   label: string

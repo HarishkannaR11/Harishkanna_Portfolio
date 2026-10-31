@@ -4,10 +4,6 @@ import { Github, Linkedin } from "@/components/ui/icons"
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
-  }
-
   return (
     <footer className="border-t border-zinc-200 dark:border-zinc-900 bg-white/20 dark:bg-zinc-950/20 py-8 relative z-10 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">

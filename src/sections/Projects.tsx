@@ -14,16 +14,21 @@ import {
 } from "@/components/ui/dialog"
 import { projectsData, Project } from "@/data/portfolioData"
 
-const categories = ["All", "Web Development", "AI/ML", "IoT & Embedded"]
+const categories = ["All", ...Array.from(new Set(projectsData.map((p) => p.category)))]
 
 export function Projects() {
   const [activeCategory, setActiveCategory] = useState("All")
+  const [showAll, setShowAll] = useState(false)
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   const filteredProjects = projectsData.filter((project) => {
     if (activeCategory === "All") return true
     return project.category === activeCategory
   })
+
+  // By default only featured projects are shown; the rest are one click away.
+  const hasHidden = filteredProjects.some((project) => !project.featured)
+  const visibleProjects = showAll ? filteredProjects : filteredProjects.filter((project) => project.featured)
 
   return (
     <section id="projects" className="py-20 sm:py-28 relative">
@@ -59,7 +64,11 @@ export function Projects() {
             {categories.map((category) => (
               <button
                 key={category}
-                onClick={() => setActiveCategory(category)}
+                onClick={() => {
+                  setActiveCategory(category)
+                  setShowAll(false)
+                }}
+                aria-pressed={activeCategory === category}
                 className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
                   activeCategory === category
                     ? "bg-white text-zinc-950 shadow-sm dark:bg-zinc-800 dark:text-zinc-100"
@@ -78,7 +87,7 @@ export function Projects() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+            {visibleProjects.map((project) => (
               <motion.div
                 key={project.id}
                 layout
@@ -95,6 +104,7 @@ export function Projects() {
                       alt={project.title}
                       className="w-full h-full object-contain p-4 group-hover:scale-[1.03] transition-transform duration-500 ease-out bg-zinc-100 dark:bg-zinc-950"
                       loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute top-3 right-3 flex items-center gap-2">
                       <Badge
@@ -170,7 +180,7 @@ export function Projects() {
                             href={project.githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="View source code"
+                            aria-label={`View source code for ${project.title}`}
                           >
                             <Github className="h-4 w-4" />
                           </a>
@@ -187,7 +197,7 @@ export function Projects() {
                             href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="View live demo"
+                            aria-label={`View live demo of ${project.title}`}
                           >
                             <ExternalLink className="h-4 w-4" />
                           </a>
@@ -200,6 +210,19 @@ export function Projects() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {hasHidden && (
+          <div className="flex justify-center mt-10">
+            <Button
+              variant="outline"
+              onClick={() => setShowAll((prev) => !prev)}
+              aria-expanded={showAll}
+              className="border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300"
+            >
+              {showAll ? "Show featured only" : `Show all ${filteredProjects.length} projects`}
+            </Button>
+          </div>
+        )}
 
         {/* Project detail modal */}
         <Dialog
@@ -227,6 +250,7 @@ export function Projects() {
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
+                  decoding="async"
                   className="w-full h-full object-contain p-2 bg-zinc-100 dark:bg-zinc-950"
                 />
               </div>
